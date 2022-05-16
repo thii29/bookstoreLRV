@@ -59,7 +59,7 @@
             <a href="#"> <div class="col-md-4">
               <div class="content_box">
                   <a href="{{ url('user/showdetailPro') }}/{{ $item->idbook }}">
-                    <input type="hidden" name="idbook" value="{{ $item->idbook }}">
+
                      <div class="left-grid-view">
                              <img src="{{ url('public') }}/frontend/images/{{ $item->image }}"
                                  class="img-responsive watch-right" alt=""/>
@@ -69,16 +69,17 @@
                     </div>
                     </a>
                 </div>
-                  <h4><a href="{{ url('user/showdetailPro') }}/{{ $item->idbook }}">{{ $item->namebook }}</a></h4>
-                   <input type="hidden" name="idbook" value="{{ $item->idbook }}">
+                  <h4>
+                    <a href="{{ url('user/showdetailPro') }}/{{ $item->idbook }}">{{ $item->namebook }}</a>
+                  </h4>
                    <h4>Mã sách: {{ $item->idbook }}</h4>
                    <p>{{ $item->description }}</p>
                 <div class="dolor-grid">
                     <span class="actual">{{ number_format($item->price) }}   VND&nbsp;</span>
                     <br>
                     <span class="actual" style="float: left">
+                        <input type="hidden" name="idbook" value="{{ $item->idbook }}">
                         <input type="number" name="quantity" value="1" min="0">
-
                     </span>
                     <span class="actual" style="float: left">
                         <br>

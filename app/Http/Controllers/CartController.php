@@ -13,11 +13,12 @@ class CartController extends Controller
 {
     public function index(){
         $cate=category::getData();
+        Cart::getcontent();
         return view('frontend.cart',['cate'=>$cate]);
     }
     public function addcart(Request $re){
         $pro = book::find($re->idbook);
-        $row = ['id'=>$pro->idbook,'name'=>$pro->namebook,
+        $row = ['id'=>$re->idbook,'name'=>$pro->namebook,
                 'price'=>$pro->price,'quantity'=>$re->quantity,
                 'attributes'=>['image'=>$pro->image]];
         Cart::add($row);
