@@ -8,7 +8,7 @@
     <tr>
         <td>{{ $item->id }}</td>
         <td>{{ $item->name }}</td>
-        <td>{{ $item->attributes['image'] }}</td>
+        <td><img src="{{ url('public') }}/frontend/images/{{ $item->attributes['image'] }}" alt="" style="width: 30%"></td>
         <td>{{ number_format($item->price) }}</td>
         <td>{{ $item->quantity }}</td>
         <td>{{ number_format($item->price*$item->quantity) }}VND</td>

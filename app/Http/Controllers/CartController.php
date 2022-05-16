@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\book;
 use App\Models\category;
-
 use Cart;
 use Illuminate\Http\Request;
 use Darryldecode\Cart\Cart as CartCart;
