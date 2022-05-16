@@ -56,7 +56,7 @@
                             <h6><a href="{{ url('user/showdetailPro') }}/{{ $key->idbook }}">{{ $key->namebook }}</a></h6>
                             <div class="star-price">
                                 <div class="dolor-grid">
-                                    <span class="actual">{{ $key->price }}</span>
+                                    <span class="actual">{{ number_format($key->price) }} VND</span>
                                 </div>
                                 <a class="now-get get-cart" href="#">Thêm vào giỏ hàng</a>
                             </div>

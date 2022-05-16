@@ -53,12 +53,13 @@
 		</div>
 		<!-- grids_of_4 -->
        @foreach ($book as $item)
-       <form action="" method="get" enctype="multipart/form-data">
+       <form action="{{ route('user.addcart') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="grid-product">
             <a href="#"> <div class="col-md-4">
               <div class="content_box">
                   <a href="{{ url('user/showdetailPro') }}/{{ $item->idbook }}">
+                    <input type="hidden" name="idbook" value="{{ $item->idbook }}">
                      <div class="left-grid-view">
                              <img src="{{ url('public') }}/frontend/images/{{ $item->image }}"
                                  class="img-responsive watch-right" alt=""/>
@@ -73,9 +74,19 @@
                    <h4>Mã sách: {{ $item->idbook }}</h4>
                    <p>{{ $item->description }}</p>
                 <div class="dolor-grid">
-                    <span class="actual">{{ number_format($item->price) }}   &nbsp;</span>
-                    <a class="now-get get-cart" href="#">Thêm vào giỏ hàng</a>
+                    <span class="actual">{{ number_format($item->price) }}   VND&nbsp;</span>
+                    <br>
+                    <span class="actual" style="float: left">
+                        <input type="number" name="quantity" value="1" min="0">
+
+                    </span>
+                    <span class="actual" style="float: left">
+                        <br>
+                        <input type="submit" value="Thêm vào giỏ hàng">
+                    </span>
+
                 </div>
+                <div class="clearfix"></div>
             </div>
         </a>
         </div>

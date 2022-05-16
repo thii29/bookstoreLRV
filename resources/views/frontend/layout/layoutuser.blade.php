@@ -50,7 +50,7 @@
                                     <a href="{{ route('user.showLogin') }}">LOG IN</a>
                                     @endif</a></li>
                             </ul>
-                        <div class="cart"><a href="#"><span> </span>CART</a></div>
+                        <div class="cart"><a href="{{ route('user.showcart') }}"><span> </span>CART</a></div>
                     <div class="clearfix"> </div>
                 </div>
                 <div class="clearfix"> </div>

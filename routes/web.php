@@ -59,4 +59,8 @@ Route::group(['prefix'=>'user'], function(){
     Route::get('showdetailPro/{idbook}','UserController@showProDetail')->name('user.detailPro');
     Route::post('postlogin','UserController@postLogin')->name('user.postlogin');
     Route::get('logout','UserController@logout')->name('user.logout');
+    Route::get('cart','CartController@index')->name('user.showcart');
+    Route::post('addcart','CartController@addcart')->name('user.addcart');
+    Route::delete('delcart','CartController@deletecart')->name('user.delcart');
+    Route::put('updatecart','CartController@updatecart')->name('user.updatecart');
 });
